@@ -1,0 +1,17 @@
+services:
+    crontab.adapter:
+        class: TiBeN\CrontabManager\CrontabAdapter
+        public: false
+
+    crontab.manager:
+        class: TiBeN\CrontabManager\CrontabRepository
+        arguments: [ "@crontab.adapter" ]
+        public: false
+
+    crontab.finder.jobs:
+        class: TEAEbook\Bundle\CrontabBundle\Finder\JobsFinder
+        arguments: [ ~, ~ ]
+
+    crontab.updater:
+        class: TEAEbook\Bundle\CrontabBundle\Crontab\Updater
+        arguments: [ "@crontab.manager", "@crontab.finder.jobs" ]

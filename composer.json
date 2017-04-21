@@ -1,0 +1,17 @@
+{
+    "name": "tea-ebook/crontab-bundle",
+    "type": "symfony-bundle",
+    "description": "Commit and deploy your crontab",
+    "keywords": ["crontab", "PHP", "symfony", "deploy", "commit"],
+    "license": "MIT",
+    "require": {
+        "php": ">=7.0",
+        "symfony/framework-bundle": "~2.7|~3.0",
+        "symfony/console": "~2.7|~3.0",
+        "symfony/dependency-injection": "~2.7|~3.0",
+        "tiben/crontab-manager": "^1.2"
+    },
+    "autoload": {
+        "psr-4": { "TEAEbook\\Bundle\\CrontabBundle\\": "" }
+    }
+}
