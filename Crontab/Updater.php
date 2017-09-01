@@ -1,7 +1,5 @@
 <?php
 
-declare(strict_types=1);
-
 namespace TEAEbook\Bundle\CrontabBundle\Crontab;
 
 use TEAEbook\Bundle\CrontabBundle\Finder\JobsFinder;

@@ -1,7 +1,5 @@
 <?php
 
-declare(strict_types=1);
-
 namespace TEAEbook\Bundle\CrontabBundle\Finder;
 
 use TiBeN\CrontabManager\CrontabJob;
@@ -17,14 +15,14 @@ class JobsFinder
         $this->workingDirectory = $workingDirectory;
     }
 
-    public function findAll(): \Traversable
+    public function findAll()
     {
         foreach ($this->jobsConfig as $jobConfig) {
             yield $this->createJob($jobConfig);
         }
     }
 
-    private function createJob(array $jobConfig): CrontabJob
+    private function createJob(array $jobConfig)
     {
         $command = $jobConfig['command'];
 
