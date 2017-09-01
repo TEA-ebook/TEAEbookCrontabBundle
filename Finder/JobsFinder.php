@@ -9,7 +9,12 @@ class JobsFinder
     private $jobsConfig;
     private $workingDirectory;
 
-    public function __construct(array $jobsConfig, string $workingDirectory)
+    /**
+     * JobsFinder constructor.
+     * @param array $jobsConfig
+     * @param string $workingDirectory
+     */
+    public function __construct(array $jobsConfig, $workingDirectory)
     {
         $this->jobsConfig = $jobsConfig;
         $this->workingDirectory = $workingDirectory;
