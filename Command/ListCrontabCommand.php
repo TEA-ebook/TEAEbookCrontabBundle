@@ -33,11 +33,11 @@ class ListCrontabCommand extends ContainerAwareCommand
                 ? sprintf('@%s', $job->shortCut)
                 : sprintf(
                     '%s %s %s %s %s',
-                    $job->minutes ?? '*',
-                    $job->hours ?? '*',
-                    $job->dayOfMonth ?? '*',
-                    $job->months ?? '*',
-                    $job->dayOfWeek ?? '*'
+                    $job->minutes != null ? $job->minutes : '*',
+                    $job->hours != null ? $job->hours :  '*',
+                    $job->dayOfMonth != null ? $job->dayOfMonth : '*',
+                    $job->months != null ? $job->months : '*',
+                    $job->dayOfWeek != null ? $job->dayOfWeek : '*'
                 );
 
             return [
