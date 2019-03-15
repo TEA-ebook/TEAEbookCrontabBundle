@@ -10,11 +10,13 @@ use Symfony\Component\Console\Output\OutputInterface;
 
 class UpdateCrontabCommand extends ContainerAwareCommand
 {
+    protected static $defaultName = 'crontab:update';
+
     protected function configure()
     {
         $this
-            ->setName('crontab:update')
             ->setDescription('Update the crontab.')
+            ->setHelp('This command allows you to update the crontab')
         ;
     }
 

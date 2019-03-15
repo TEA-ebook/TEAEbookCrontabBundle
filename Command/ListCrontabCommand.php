@@ -12,11 +12,13 @@ use TiBeN\CrontabManager\CrontabJob;
 
 class ListCrontabCommand extends ContainerAwareCommand
 {
+    protected static $defaultName = 'crontab:list';
+
     protected function configure()
     {
         $this
-            ->setName('crontab:list')
             ->setDescription('List the jobs configured in the crontab.')
+            ->setHelp('This command allows you to list all the jobs created in the crontab')
         ;
     }
 

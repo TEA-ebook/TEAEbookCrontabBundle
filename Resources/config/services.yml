@@ -11,7 +11,14 @@ services:
     crontab.finder.jobs:
         class: TEAEbook\Bundle\CrontabBundle\Finder\JobsFinder
         arguments: [ ~, ~ ]
+        public: true
 
     crontab.updater:
         class: TEAEbook\Bundle\CrontabBundle\Crontab\Updater
         arguments: [ "@crontab.manager", "@crontab.finder.jobs" ]
+        public: true
+
+    TEAEbook\Bundle\CrontabBundle\Command\:
+        resource: '../../Command/*'
+        tags: ['console.command']
+
