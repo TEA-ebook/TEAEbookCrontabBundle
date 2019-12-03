@@ -8,7 +8,7 @@
         "php": ">=7.0",
         "symfony/framework-bundle": "~2.7|~3.0|~4.2",
         "symfony/console": "~2.7|~3.0|~4.2",
-        "symfony/dependency-injection": "~2.7|~3.0|~4.2",
+        "symfony/dependency-injection": "~2.7|~3.0|~4.*",
         "tiben/crontab-manager": "^1.2"
     },
     "autoload": {
